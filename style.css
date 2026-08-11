@@ -201,7 +201,7 @@ body {
 }
 
 .tab-add {
-    flex: 0 0 auto;   /* don't stretch, keep natural size */
+    flex: 0 0 auto;   /* we use it to keep the natural size and the tab does not get strethc */
     margin-left: auto;
     font-weight: bold;
     font-size: 18px;
@@ -286,7 +286,7 @@ body {
 
 .post-body {
     flex: 1;
-    min-width: 0;   /* lets long text/handles truncate instead of overflowing */
+    min-width: 0;   /* lets long text/handles stop instead of overflowing */
 }
 
 /* post header row: name, badge, handle, time, menu */
@@ -301,7 +301,7 @@ body {
     font-size: 15px;
 }
 
-/* verified badge size — one shared rule for every context (main post, quoted post, nested post, profile card) so it never falls back to the SVG's huge natural size */
+/* verified badge size */
 .verified-badge {
     width: 16px;
     height: 16px;
@@ -346,6 +346,7 @@ body {
     font-size: 15px;
     line-height: 1.4;
 }
+
 
 /* quoted post box */
 .quoted-post {
@@ -476,13 +477,8 @@ body {
     margin-left: 20px;
 }
 
-/* Right section */
 .right-sidebar {
     border-right: 1px solid #2f3336;
-}
-
-/* Right section */
-.right-sidebar {
     padding: 10px 16px;
     display: flex;
     flex-direction: column;
@@ -524,6 +520,12 @@ body {
     border: 1px solid #2f3336;
     border-radius: 16px;
     padding: 16px;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.sidebar-card:hover {
+  border-color: #555;
+  box-shadow: 0 0 15px rgba(29, 155, 240, 0.08);
 }
 
 .sidebar-card h3 {
@@ -555,16 +557,46 @@ body {
     font-size: 14px;
 }
 
-/* subscribe button */
 .subscribe-btn {
-    background-color: #1d9bf0;
-    color: white;
-    border: none;
-    border-radius: 9999px;
-    padding: 10px 20px;
-    font-size: 15px;
-    font-weight: bold;
-    cursor: pointer;
+  color: white;
+  border: none;
+  border-radius: 999px;
+  padding: 10px 20px;
+  font-size: 15px;
+  font-weight: bold;
+  cursor: pointer;
+
+  background: linear-gradient(
+    90deg,
+    #1d9bf0,
+    #8b5cf6,
+    #ec4899,
+    #1d9bf0
+  );
+
+  background-size: 300% 100%;
+  animation: gradientMove 4s ease infinite;
+
+  transition: transform 0.2s ease;
+}
+/* adding a css animation, yes ofc for extra credits */
+
+@keyframes gradientMove {
+  0% {
+    background-position: 0% 50%;
+  }
+
+  50% {
+    background-position: 100% 50%;
+  }
+
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.subscribe-btn:hover {
+  transform: scale(1.05);
 }
 
 .subscribe-btn:hover {
@@ -621,7 +653,7 @@ body {
   color: #71767b;
 }
 
-/* trending items inside what's happening card */
+/* css of trending items inside what's happening card */
 .trend-item {
     display: flex;
     align-items: center;
