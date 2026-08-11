@@ -1,0 +1,363 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>X Interface</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- class twitter contains the complete twitter interface-->
+    <!-- i divide the page into three parts the leftmost sidebar, the center one is for the content and the rightmost is the subscribe hashtags todays news etc etc-->
+
+    <div class="twitter">
+      <!-- class sidebar is the leftmost part-->
+
+      <div class="sidebar">
+        <!-- X logo -->
+
+        <div class="logo">
+          <img src="assets/x-icon.svg" alt="X logo" />
+        </div>
+
+        <!-- navigation links: home, explore, notifications, etc -->
+        <nav class="nav-links">
+          <a href="#" class="nav-item">
+            <img src="assets/home.svg" alt="" />
+            <span>Home</span>
+          </a>
+
+          <a href="#" class="nav-item">
+            <img src="assets/explore.svg" alt="" />
+            <span>Explore</span>
+          </a>
+
+          <a href="#" class="nav-item">
+            <img src="assets/notifications.svg" alt="" />
+            <span>Notifications</span>
+          </a>
+
+          <a href="#" class="nav-item">
+            <img src="assets/follow.svg" alt="" />
+            <span>Follow</span>
+          </a>
+
+          <a href="#" class="nav-item">
+            <img src="assets/chat.svg" alt="" />
+            <span>Chat</span>
+          </a>
+
+          <a href="#" class="nav-item">
+            <img src="assets/grok.svg" alt="" />
+            <span>Grok</span>
+          </a>
+
+          <a href="#" class="nav-item">
+            <img src="assets/BOOKMARK.png" alt="" />
+            <span>Bookmarks</span>
+          </a>
+
+          <a href="#" class="nav-item">
+            <img src="assets/studio.svg" alt="" />
+            <span>Creator Studio</span>
+          </a>
+
+          <a href="#" class="nav-item">
+            <img src="assets/premium.svg" alt="" />
+            <span>Premium</span>
+          </a>
+
+          <a href="#" class="nav-item">
+            <img src="assets/profile.svg" alt="" />
+            <span>Profile</span>
+          </a>
+
+          <a href="#" class="nav-item">
+            <img src="assets/more.svg" alt="" />
+            <span>More</span>
+          </a>
+        </nav>
+
+        <button class="post-btn">Post</button>
+
+        <!-- mini profile card at the bottom of sidebar -->
+        <div class="profile-card">
+          <div class="avatar"></div>
+
+          <div class="profile-info">
+            <span class="name">
+              aitoss
+              <img
+                src="assets/blue_verfied.svg"
+                alt="verified"
+                class="verified-badge"
+              />
+            </span>
+            <span class="handle">@aitoss</span>
+          </div>
+
+          <button class="more-btn">
+            <span>...</span>
+          </button>
+        </div>
+      </div>
+
+      <!-- it contains the main feed-->
+
+      <div class="content">
+        <!--tabs section for different navigation-->
+
+        <div class="tabs">
+          <span class="tab active">For you</span>
+          <span class="tab">Following</span>
+          <span class="tab">Politics</span>
+          <span class="tab">Gaming</span>
+          <span class="tab">Movies & TV</span>
+          <span class="tab tab-add">+</span>
+        </div>
+
+        <!-- post composer box -->
+        <div class="composer">
+          <div class="avatar"></div>
+
+          <div class="composer-main">
+            <input
+              type="text"
+              class="composer-input"
+              placeholder="What's happening?"
+            />
+
+            <div class="composer-actions">
+              <div class="composer-icons">
+                <img src="assets/image.svg" alt="" />
+                <img src="assets/gif.svg" alt="" />
+                <img src="assets/grok.svg" alt="" />
+                <img src="assets/poll.svg" alt="" />
+                <img src="assets/emoji.svg" alt="" />
+                <img src="assets/schedule.svg" alt="" />
+                <img src="assets/location.svg" alt="" />
+                <img src="assets/flag.svg" alt="" />
+              </div>
+
+              <button class="composer-post-btn">Post</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- feed section for posts -->
+        <div class="feed">
+          <article class="post">
+            <div class="avatar"></div>
+
+            <div class="post-body">
+              <!-- post header: name, badge, handle, time, menu -->
+              <div class="post-header">
+                <span class="post-name">Elon Musk</span>
+                <img
+                  src="assets/blue_verfied.svg"
+                  alt="verified"
+                  class="verified-badge"
+                />
+                <span class="post-handle">@elonmusk</span>
+                <span class="post-dot">·</span>
+                <span class="post-time">21h</span>
+
+                <button class="post-grok-btn">
+                  <img src="assets/grok.svg" alt="grok" />
+                </button>
+                <button class="post-more-btn">
+                  <span>...</span>
+                </button>
+              </div>
+
+              <!--post content starts from here-->
+              <p class="post-text">Slavery was ended primarily by Britain</p>
+
+              <!-- quoted post -->
+              <div class="quoted-post">
+                <div class="quoted-header">
+                  <div class="avatar avatar-sm"></div>
+                  <span class="post-name">iamyesyouareno</span>
+                  <img
+                    src="assets/blue_verfied.svg"
+                    alt="verified"
+                    class="verified-badge"
+                  />
+                  <span class="post-handle">@iamyesyouareno</span>
+                  <span class="post-dot">·</span>
+                  <span class="post-time">Aug 3</span>
+                </div>
+
+                <p class="post-text">The inconvenient truth.</p>
+
+                <!-- nested post inside the quoted post (PanAfrican Intel) -->
+                <div class="nested-post">
+                  <div class="nested-header">
+                    <div class="avatar avatar-sm"></div>
+                    <span class="post-name">PanAfrican Intel</span>
+                    <img
+                      src="assets/blue_verfied.svg"
+                      alt="verified"
+                      class="verified-badge"
+                    />
+                    <span class="post-handle">@SankaraDispatch</span>
+
+                    <button class="post-grok-btn">
+                      <img src="assets/grok.svg" alt="grok" />
+                    </button>
+                    <button class="post-more-btn"><span>...</span></button>
+                  </div>
+
+                  <p class="post-text">
+                    Slavery is White People's worst crime.
+                  </p>
+
+                  <img
+                    src="assets/slavery-statue.jpg"
+                    alt=""
+                    class="nested-image"
+                  />
+
+                  <div class="community-note">
+                    <div class="community-note-header">
+                      <img src="assets/note-icon.png" alt="" />
+                      <span>Readers added context to this image</span>
+                    </div>
+                    <p>
+                      The monument in this image is located in Zanzibar and
+                      depicts one of the country's last slave markets, which was
+                      run by the Arabs and closed by the British in 1873
+                    </p>
+                    <a href="#" class="community-note-link"
+                      >dandc.eu/en/article/tra...</a
+                    >
+                  </div>
+                </div>
+              </div>
+
+              <!-- LIKE SHARE COMMENT-->
+              <div class="action-bar">
+                <div class="action-item">
+                  <img src="assets/REPLY.png" alt="" />
+                  <span>4.9K</span>
+                </div>
+                <div class="action-item">
+                  <img src="assets/RETWEET.png" alt="" />
+                  <span>7.6K</span>
+                </div>
+                <div class="action-item">
+                  <img src="assets/LIKE.png" alt="" />
+                  <span>69K</span>
+                </div>
+                <div class="action-item">
+                  <img src="assets/VIEWS.png" alt="" />
+                  <span>7.1M</span>
+                </div>
+                <div>
+                  <div class="action-item">
+                    <img src="assets/BOOKMARK.png" alt="" />
+                  </div>
+                  <div class="action-item">
+                    <img src="assets/SHARE.png" alt="" />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+
+      <!-- it contains the rightmost side bar-->
+
+      <div class="right-sidebar">
+        <div class="right-sidebar">
+          <!-- search bar -->
+          <div class="search-bar">
+            <img src="assets/explore.svg" alt="" />
+            <input type="text" placeholder="Search" />
+          </div>
+
+          <!-- subscribe to premium card -->
+          <div class="sidebar-card">
+            <h3>Subscribe to Premium</h3>
+            <p>
+              Get rid of ads, see your analytics, boost your replies and unlock
+              20+ features.
+            </p>
+            <button class="subscribe-btn">Subscribe</button>
+          </div>
+
+          <!-- today's news card -->
+          <div class="sidebar-card">
+            <div class="sidebar-card-header">
+              <h3>Today's News</h3>
+              <span class="close-btn">✕</span>
+            </div>
+
+            <div class="news-item">
+              <p class="news-title">
+                Yash's 'Toxic' Trailer Countdown Builds Intense Buzz
+              </p>
+              <span class="news-meta"
+                >2 days ago · Entertainment · 10.3K posts</span
+              >
+            </div>
+
+            <div class="news-item">
+              <p class="news-title">
+                Rajya Sabha Erupts Over Ram Temple Donation Theft Allegations
+              </p>
+              <span class="news-meta">Trending now · News · 859 posts</span>
+            </div>
+
+            <div class="news-item">
+              <p class="news-title">
+                Delhi Police Uncover Fake Accounts in CJP Protest Probe
+              </p>
+              <span class="news-meta">Trending now · News · 1,741 posts</span>
+            </div>
+          </div>
+
+          <!-- what's happening card -->
+          <div class="sidebar-card">
+            <h3>What's happening</h3>
+
+            <div class="trend-item">
+              <div class="trend-text">
+                <span class="trend-cat">Entertainment · Trending</span>
+                <span class="trend-name">#MalavikaMohanan</span>
+              </div>
+              <button class="trend-more-btn"><span>···</span></button>
+            </div>
+
+            <div class="trend-item">
+              <div class="trend-text">
+                <span class="trend-cat">Trending in India</span>
+                <span class="trend-name">#IndiGo20</span>
+              </div>
+              <button class="trend-more-btn"><span>···</span></button>
+            </div>
+
+            <div class="trend-item">
+              <div class="trend-text">
+                <span class="trend-cat">Politics · Trending</span>
+                <span class="trend-name">#गोमाता_राष्ट्रमाता</span>
+              </div>
+              <button class="trend-more-btn"><span>···</span></button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="floating-buttons">
+        <button class="floating-btn">
+          <img src="assets/grok.svg" alt="" />
+        </button>
+        <button class="floating-btn">
+          <img src="assets/chat.svg" alt="" />
+        </button>
+      </div>
+
+    </div>
+  </body>
+</html>
